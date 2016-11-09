@@ -95,7 +95,7 @@ alias vim='nvim'
 alias nano='nvim'
 alias vi='nvim'
 
-alias update='sudo apt update && sudo apt full-upgade'
+alias update='sudo apt update && sudo apt full-upgrade'
 
 alias eclipse='/home/simon/eclipse/java-neon/eclipse'
 alias eclipse-tomcat='/home/simon/eclipse/jee-neon/elcipse'
