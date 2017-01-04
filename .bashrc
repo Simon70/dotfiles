@@ -94,8 +94,8 @@ alias l='ls -o -hX --group-directories-first'
 alias vim='nvim'
 alias nano='nvim'
 alias vi='nvim'
-
-alias update='sudo apt update && sudo apt full-upgrade'
+alias lua='lua5.3'
+alias update='sudo apt update && sudo apt full-upgrade -y'
 
 alias eclipse='/home/simon/eclipse/java-neon/eclipse'
 alias eclipse-tomcat='/home/simon/eclipse/jee-neon/elcipse'
@@ -103,8 +103,8 @@ alias ..='cd ..'
 alias hs='ghci'
 alias py3='python3'
 alias at='atom'
-alias wd='/home/simon/workspaces/stealth-game/'
-alias cwd='cd /home/simon/workspaces/stealth-game/'
+alias wd='/home/simon/workspaces/lua/'
+alias cwd='cd /home/simon/workspaces/workspace-python/'
 alias i3c='vim ~/.i3/config'
 alias brc='vim ~/.bashrc'
 
@@ -133,3 +133,6 @@ if ! shopt -oq posix; then
 fi
 [ -r /home/simon/.byobu/prompt ] && . /home/simon/.byobu/prompt   #byobu-prompt#
 export PATH="$HOME/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:$PATH"
+
+export NVM_DIR="/home/simon/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
