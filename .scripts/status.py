@@ -6,22 +6,23 @@ status = Status()
 # Tue 30 Jul 11:59:46 PM KW31
 #                          ^-- calendar week
 status.register("clock",
-    format="%a %-d %b %X KW%V",)
+                format="%a %-d %b %X KW%V",)
 
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
 status.register("load",
-    interval=10,)
+                interval=10,)
 
 # Shows your CPU temperature, if you have a Intel CPU
 status.register("temp",
-        interval=5,
-    format=" {temp:.0f}°C",)
+                interval=5,
+                format=" {temp:.0f}°C",)
 
 
 status.register("backlight",
-    base_path="/sys/class/backlight/intel_backlight/",
-    format=" {percentage}%",)
+                interval=2,
+                base_path="/sys/class/backlight/intel_backlight/",
+                format=" {percentage}%",)
 
 # The battery monitor has many formatting options, see README for details
 
@@ -35,20 +36,20 @@ status.register("backlight",
 # If you don't have a desktop notification demon yet, take a look at dunst:
 #   http://www.knopwob.org/dunst/
 status.register("battery",
-    format="{status} {percentage:.2f}% {remaining:%E%hh:%Mm}",
-    alert=True,
-    alert_percentage=5,
-    interval=10,
-    color="#ffffff",
-    full_color="#ffffff",
-    charging_color="#ffffff",
-    critical_color="#ff0000",
-    status={
-        "DPL": "",
-        "DIS": "",
-        "CHR": "",
-        "FULL": "",
-    },)
+                format="{status} {percentage:.2f}% {remaining:%E%hh:%Mm}",
+                alert=True,
+                alert_percentage=5,
+                interval=10,
+                color="#ffffff",
+                full_color="#ffffff",
+                charging_color="#ffffff",
+                critical_color="#ff0000",
+                status={
+                    "DPL": "",
+                    "DIS": "",
+                    "CHR": "",
+                    "FULL": "",
+                },)
 
 # Displays whether a DHCP client is running
 #status.register("runwatch", name="DHCP", path="/var/run/dhclient*.pid",)
@@ -63,43 +64,43 @@ status.register("battery",
 # Note: requires both netifaces and basiciw (for essid and quality)
 #status.register("network", interface="wlo1", format_up="{quality:.0f}% {essid}",)
 status.register(
-	"network",
-        interval=10,
-	interface="wlo1",
-        divisor=1024*1024,
-        dynamic_color=False,
-        color_up="#ffffff",
-        format_up=" {essid} {quality}% {bytes_sent}MB/s {bytes_recv}MB/s",
-	format_down=" DOWN",)
+    "network",
+    interval=10,
+    interface="wlo1",
+    divisor=1024 * 8,
+    dynamic_color=False,
+    color_up="#ffffff",
+    format_up=" {essid} {quality}% {bytes_sent}KB/s {bytes_recv}KB/s",
+    format_down=" ",)
 # Shows disk usage of /
 # Format:
 # 42/128G [86G]
 status.register("disk",
-        interval=60,
-    path="/media/data/",
-    format=" {percentage_used}%",)
+                interval=60,
+                path="/media/data/",
+                format=" {percentage_used}%",)
 
 status.register("disk",
-    interval=60,
-    path="/",
-    format=" {percentage_used}%",)
+                interval=60,
+                path="/",
+                format=" {percentage_used}%",)
 
 # Shows pulseaudio default sink volume
 #
 # Note: requires libpulseaudio from PyPI
 status.register("pulseaudio",
-    format=" {volume}%",)
+                format=" {volume}%",)
 
 # Shows mpd status
 # Format:
 # Cloud connected Reroute to Remain
 status.register("now_playing",
-    format="  {status} {title} - {album}",
-    format_no_player="  {status}",
-    status={
-        "pause": "",
-        "play": "",
-        "stop": "",
-    },)
+                format="  {status} {title} - {album}",
+                format_no_player="  {status}",
+                status={
+                    "pause": "",
+                    "play": "",
+                    "stop": "",
+                },)
 
 status.run()
