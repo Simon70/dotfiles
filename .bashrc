@@ -92,8 +92,6 @@ alias ll='ls -alF --group-directories-first'
 alias la='ls -o -AhX --group-directories-first'
 alias l='ls -o -hX --group-directories-first'
 alias vim='nvim'
-alias nano='nvim'
-alias vi='nvim'
 alias lua='lua5.3'
 alias update='sudo apt update && sudo apt full-upgrade -y'
 
@@ -103,11 +101,12 @@ alias ..='cd ..'
 alias hs='ghci'
 alias py3='python3'
 alias at='atom'
-alias wd='/home/simon/workspaces/lua/'
-alias cwd='cd /home/simon/workspaces/workspace-python/'
-alias i3c='vim ~/.i3/config'
-alias brc='vim ~/.bashrc'
-
+alias cwd='cd ~/workspaces/'
+alias gj='cd ~/workspaces/workspace-lua/IA-Gamejam-Game'
+alias gsync='cd ~/drive;./grive;cd -'
+alias i3c='nano ~/.i3/config'
+alias brc='nano ~/.bashrc'
+alias gc='git clone '
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -134,5 +133,3 @@ fi
 [ -r /home/simon/.byobu/prompt ] && . /home/simon/.byobu/prompt   #byobu-prompt#
 export PATH="$HOME/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:$PATH"
 
-export NVM_DIR="/home/simon/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

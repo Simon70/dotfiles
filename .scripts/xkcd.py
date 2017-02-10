@@ -43,7 +43,7 @@ jsonObject = get_xkcd_info("http://xkcd.com/info.0.json")
 # jsonObject = get_xkcd_info("https://xkcd.com/859//info.0.json") # breaking mouseover
 
 number = jsonObject['num']
-number = random.randint(1,number)
+# number = random.randint(1,number)
 
 jsonObject = get_xkcd_info("http://xkcd.com/" + str(number) + "/info.0.json")
 
