@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Upload
+Exec=/home/simon/.scripts/upload.sh
+Terminal=true
+Type=Application
