@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 rm .bashrc
 cp ~/.bashrc .
 rm -rf .scripts
