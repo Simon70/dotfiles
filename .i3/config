@@ -125,12 +125,19 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="jetbrains-idea"] $ws3
 assign [class="jetbrains-pycharm"] $ws4
 assign [class="Telegram"] $ws9
+assign [class="TelegramDesktop"] $ws9
 assign [class="vlc"] $ws10
 assign [class="franz"] $ws9
+assign [class="Franz"] $ws9
+assign [class="Minecraft 1.10.2"] $ws8
+assign [class="net-ftb-main-Main"] $ws8
 
 for_window [class="Lxappearance"] floating enable
 #for_window [class="Seahorse"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [class="gtubeclock"] floating enable
+for_window [class="Gtubeclock"] floating enable
+for_window [class="openttd"] fullscreen enable
 
 # multi mon
 bindsym $mod+Shift+m ~/.scripts/multi-monitor.sh
@@ -144,7 +151,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+p exec ~/.scripts/poweroff.sh
 
 # lock
-bindsym $mod+y exec i3lock -c 000000 --show-failed-attempts
+bindsym $mod+z exec i3lock -c 000000 --show-failed-attempts
 bindsym $mod+x exec ~/.scripts/lock-blur.sh
 bindsym $mod+c exec ~/.scripts/lock-xkcd.sh
 bindsym $mod+Tab exec ~/.scripts/build-love.sh
@@ -157,9 +164,9 @@ bindsym Shift+Print exec gnome-screenshot
 mode "resize" {
     # focus
     bindsym $mod+Left focus left
-	  bindsym $mod+Down focus down
-	  bindsym $mod+Up focus up
-	  bindsym $mod+Right focus right
+	bindsym $mod+Down focus down
+	bindsym $mod+Up focus up
+	bindsym $mod+Right focus right
 
     # resize
     bindsym Left resize shrink width 10 px or 10 ppt
@@ -217,13 +224,13 @@ bindsym $mod+F4 exec ~/.scripts/set-xkcd-background.sh
 exec --no-startup-id i3-msg "workspace $ws2; exec firefox; workspace $ws1"
 exec --no-startup-id ~/.scripts/set-background.sh
 exec --no-startup-id fluxgui
-exec --no-startup-id /opt/telegram/Telegram
+exec --no-startup-id /home/simon/Telegram/Telegram
 exec --no-startup-id nm-applet
-exec --no-startup-id compton -f
+exec --no-startup-id compton -f --vsync opengl --backend glx
 exec --no-startup-id diodon
 exec --no-startup-id setxkbmap us
 exec --no-startup-id blueman-applet
-exec --no-startup-id franz
+exec --no-startup-id /home/simon/franz/Franz
 
 # colors
 # class                 border  backgr. text    indicator child_border
