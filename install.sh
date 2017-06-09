@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 printf "Removing existing configs..."
 rm ~/.bashrc
 rm -rf ~/.scripts

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 sudo apt install rofi diodon
 chmod +x ~/.scripts/*
 
