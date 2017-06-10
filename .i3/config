@@ -152,7 +152,7 @@ bindsym $mod+Shift+p exec ~/.scripts/poweroff.sh
 
 # lock
 bindsym $mod+z exec i3lock -c 000000 --show-failed-attempts
-bindsym $mod+x exec --no-startup-id ~/.scripts/lock-random.sh
+bindsym $mod+x exec ~/.scripts/lock-random.sh
 bindsym $mod+c exec ~/.scripts/lock-screenshot.sh
 
 # love2d
